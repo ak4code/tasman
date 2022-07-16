@@ -6,7 +6,6 @@ module.exports = defineConfig({
   css: {
     extract: true
   },
-  filenameHashing: false,
   chainWebpack: config => {
     config.plugins.delete("html")
     config.plugins.delete("preload")
@@ -15,7 +14,7 @@ module.exports = defineConfig({
   configureWebpack: {
     plugins: [
       new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
-      new WebpackManifestPlugin({})
+      new WebpackManifestPlugin({fileName: 'build.json'})
     ]
   },
   devServer: {
@@ -36,4 +35,5 @@ module.exports = defineConfig({
   },
   transpileDependencies: true,
   runtimeCompiler: true,
+  filenameHashing: false,
 })

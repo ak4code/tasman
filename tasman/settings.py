@@ -119,3 +119,8 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissions'
     ]
 }
+
+MANIFEST_LOADER = {
+    'manifest_file': 'build.json',  # name of your manifest file
+    'cache': not DEBUG,
+}
