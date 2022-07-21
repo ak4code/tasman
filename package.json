@@ -10,9 +10,10 @@
   "dependencies": {
     "autoprefixer": "^10",
     "core-js": "^3.8.3",
+    "element-plus": "^2.2.9",
     "postcss": "^8",
     "register-service-worker": "^1.7.2",
-    "tailwindcss": "^3",
+    "tailwindcss": "^3.1.6",
     "vue": "^3.2.13",
     "vuex": "^4.0.0"
   },
@@ -25,12 +26,14 @@
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "axios": "^0.18.0",
+    "babel-plugin-component": "^1.1.1",
     "clean-webpack-plugin": "^4.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
     "vue-cli-plugin-axios": "~0.0.4",
+    "vue-cli-plugin-element-plus": "~0.0.13",
     "vue-cli-plugin-tailwind": "~3.0.0",
     "webpack-manifest-plugin": "^5.0.0"
   }

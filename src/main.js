@@ -4,10 +4,16 @@ import { createApp } from "vue"
 import store from "./store"
 import "./assets/tailwind.css"
 import TasHeader from "@/components/base/TasHeader"
+import KanbanBoards from "@/components/kanban/KanbanBoards"
+import installElementPlus from './plugins/element'
 
 const app = createApp({
   components: {
-    TasHeader
+    TasHeader,
+    KanbanBoards
   }
 })
+
+installElementPlus(app)
+
 app.use(store).use(axios).mount("#tasman")

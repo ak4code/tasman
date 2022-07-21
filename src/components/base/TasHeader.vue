@@ -16,8 +16,8 @@
       </a>
     </div>
     <div class="right flex justify-end w-full">
-      <button class="bg-white/20 h-12 px-5 align-middle font-bold text-lg text-white rounded">
-        +
+      <button class="bg-white/20 h-12 px-5 align-middle font-bold text-white rounded">
+        + Доска
       </button>
     </div>
   </nav>
@@ -25,10 +25,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue"
 
-const msg = ref("tas-header")
-console.log(msg)
 </script>
 
 <style scoped>
