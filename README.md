@@ -1,4 +1,4 @@
-# Tasman - task manager with Kanban board
+# Tasman - project manager with boards and card task.
 Create .env file with:
 ```
 DEBUG=1

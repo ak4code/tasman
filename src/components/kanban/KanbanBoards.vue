@@ -1,5 +1,5 @@
 <template>
-<div id="kan-ban" class="flex min-h-[93.5vh] bg-slate-400 px-4 py-4 gap-4">
+<div id="kan-ban" class="flex px-4 py-4 gap-4">
   <div class="board bg-slate-200 px-2 py-1 h-fit w-80 rounded" v-for="board in boards" :key="board.id"
        @drop.prevent="dropHandler($event, board.id)" @dragover.prevent @dragenter.prevent>
     <h3 class="text-cyan-900 font-bold">{{ board.name }}</h3>

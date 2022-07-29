@@ -4,13 +4,13 @@ import { createApp } from "vue"
 import store from "./store"
 import "./assets/tailwind.css"
 import TasHeader from "@/components/base/TasHeader"
-import KanbanBoards from "@/components/kanban/KanbanBoards"
+import ProjectsList from "@/components/projects/ProjectsList"
 import installElementPlus from './plugins/element'
 
 const app = createApp({
   components: {
     TasHeader,
-    KanbanBoards
+    ProjectsList
   }
 })
 

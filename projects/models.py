@@ -3,7 +3,7 @@ from django.db import models
 
 class Project(models.Model):
     name = models.CharField(max_length=255, verbose_name='Название')
-    boards = models.ManyToManyField('Board', verbose_name='Доски')
+    boards = models.ManyToManyField('Board', through='Card', verbose_name='Доски')
     created = models.DateTimeField(auto_now_add=True, verbose_name='Создан')
     updated = models.DateTimeField(auto_now=True, verbose_name='Обновлен')
 
@@ -27,8 +27,10 @@ class Board(models.Model):
 
 
 class Card(models.Model):
-    project = models.ForeignKey('Project', blank=True, null=True, related_name='cards', on_delete=models.CASCADE, verbose_name='Проект')
-    board = models.ForeignKey('Board', blank=True, null=True, related_name='cards', on_delete=models.CASCADE, verbose_name='Доска')
+    project = models.ForeignKey('Project', blank=True, null=True, related_name='cards', on_delete=models.CASCADE,
+                                verbose_name='Проект')
+    board = models.ForeignKey('Board', blank=True, null=True, related_name='cards', on_delete=models.CASCADE,
+                              verbose_name='Доска')
     title = models.CharField(max_length=255, verbose_name='Заголовок')
     description = models.TextField(blank=True, null=True, verbose_name='Описание')
     created = models.DateTimeField(auto_now_add=True, verbose_name='Создан')

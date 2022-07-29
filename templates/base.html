@@ -13,8 +13,10 @@
 </head>
 <body>
 <div id="tasman">
-    <tas-header></tas-header>
-    {% block content %}{% endblock %}
+    <div class="min-h-screen bg-slate-400">
+        <tas-header></tas-header>
+        {% block content %}{% endblock %}
+    </div>
 </div>
 {% manifest_match '*.js' '<script src="{match}" async></script>' %}
 </body>

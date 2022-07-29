@@ -3,15 +3,23 @@ import { _axios } from "@/plugins/axios"
 
 export default createStore({
   state: {
+    projects: [],
     boards: []
   },
   getters: {},
   mutations: {
+    SET_PROJECTS(state, data) {
+      state.projects = data
+    },
     SET_BOARDS(state, data) {
       state.boards = data
     }
   },
   actions: {
+    async getProjects({ commit }) {
+      let { data } = await _axios.get("/api/projects/")
+      commit("SET_PROJECTS", data)
+    },
     async getBoards({ commit }) {
       let { data } = await _axios.get("/api/boards/")
       commit("SET_BOARDS", data)

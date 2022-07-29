@@ -32,7 +32,7 @@ INSTALLED_APPS = [
     'django_filters',
     'manifest_loader',
     # apps
-    'kanban',
+    'projects',
 ]
 
 MIDDLEWARE = [

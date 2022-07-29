@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from kanban.views import ProjectViewSet, BoardViewSet, CardViewSet
+from projects.views import ProjectViewSet, BoardViewSet, CardViewSet
 
 router = DefaultRouter()
 router.register(r'projects', ProjectViewSet)

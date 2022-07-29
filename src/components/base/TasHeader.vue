@@ -17,7 +17,7 @@
     </div>
     <div class="right flex justify-end w-full">
       <button class="bg-white/20 h-12 px-5 align-middle font-bold text-white rounded">
-        + Доска
+        + Проект
       </button>
     </div>
   </nav>
