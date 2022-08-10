@@ -16,16 +16,14 @@
       </a>
     </div>
     <div class="right flex justify-end w-full">
-      <button class="bg-white/20 h-12 px-5 align-middle font-bold text-white rounded">
-        + Проект
-      </button>
+      <NewProjectDialog></NewProjectDialog>
     </div>
   </nav>
 </header>
 </template>
 
 <script setup>
-
+import NewProjectDialog from "../projects/NewProjectDialog"
 </script>
 
 <style scoped>

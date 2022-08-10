@@ -2,22 +2,22 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block seo_title %}Tasman{% endblock %}</title>
-    {% manifest_match '*.css' '<link href="{match}" rel="preload" as="style">' %}
-    {% manifest_match '*.js' '<link href="{match}" rel="preload" as="script">' %}
-    {% manifest_match '*.css' '<link href="{match}" rel="stylesheet">' %}
-    {% manifest_match 'favicon.svg' '<link rel="icon" href="{match}" type="image/svg+xml">' %}
-    <meta name="theme-color" content="#222736">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block seo_title %}Tasman{% endblock %}</title>
+  {% manifest_match '*.css' '<link href="{match}" rel="preload" as="style">' %}
+  {% manifest_match '*.js' '<link href="{match}" rel="preload" as="script">' %}
+  {% manifest_match '*.css' '<link href="{match}" rel="stylesheet">' %}
+  {% manifest_match 'favicon.svg' '<link rel="icon" href="{match}" type="image/svg+xml">' %}
+  <meta name="theme-color" content="#222736">
 </head>
 <body>
-<div id="tasman">
+  <div id="tasman">
     <div class="min-h-screen bg-slate-400">
-        <tas-header></tas-header>
-        {% block content %}{% endblock %}
+      <tas-header></tas-header>
+      {% block content %}{% endblock %}
     </div>
-</div>
-{% manifest_match '*.js' '<script src="{match}" async></script>' %}
+  </div>
+  {% manifest_match '*.js' '<script src="{match}" async></script>' %}
 </body>
 </html>

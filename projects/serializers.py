@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Project, Board, Card
+from .models import Project, ProjectBoard, Board, Card
 
 
 class CardSerializer(serializers.ModelSerializer):
@@ -10,15 +10,22 @@ class CardSerializer(serializers.ModelSerializer):
 
 
 class BoardSerializer(serializers.ModelSerializer):
-    cards = CardSerializer(read_only=True, many=True)
-
     class Meta:
         model = Board
         fields = '__all__'
 
 
+class ProjectBoardSerializer(serializers.ModelSerializer):
+    cards = CardSerializer(read_only=True, many=True)
+
+    class Meta:
+        model = ProjectBoard
+        fields = ['id', 'board', 'cards', 'name']
+
+
 class ProjectSerializer(serializers.ModelSerializer):
-    boards = BoardSerializer(read_only=True, many=True)
+    active_boards = ProjectBoardSerializer(read_only=True, many=True)
+    link = serializers.CharField(source='get_absolute_url', read_only=True)
 
     class Meta:
         model = Project
